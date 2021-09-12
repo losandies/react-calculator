@@ -1,0 +1,29 @@
+.calculator-buttons {
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+	top: 20px;
+	left: 5px;
+}
+
+button {
+	margin: 5px;
+	font-size: 40px;
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	border: solid;
+	background-color: rgb(248, 195, 19);
+	border: 1px solid black;
+	box-shadow: 0 0 3px black;
+}
+
+button:hover {
+	background-color: rgb(235, 180, 0);
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+button:active {
+	transform: scale(0.98);
+}
