@@ -1,1 +1,1 @@
-This is a calculator that I've built with react
+This is a caclulator that I built with react. I've completed the basic functionality which allows a user to enter in an equation and by using a package named string-math, javascript will then evaluate the string as an equation.
