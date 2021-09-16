@@ -8,19 +8,44 @@ function App() {
 	const [input, setInput] = useState([]);
 
 	const handleClick = (button) => {
-		setInput(input + button);
-
-		if (button === '=') {
-			calculate(input);
+		if (button === '.') {
+			checkMultipleDecimal(input);
+		} else if (
+			button === '+' ||
+			button === '/' ||
+			button === '*' ||
+			button === '-'
+		) {
+			checkAdjacentOperators(input, button);
+		} else if (button === '=') {
+			calculate(input).then(setInput([]));
 		} else if (button === 'AC') {
 			clearAll();
 		} else if (button === 'C') {
 			backspace();
+		} else {
+			setInput(input + button);
+		}
+	};
+
+	const checkMultipleDecimal = (array) => {
+		if (array.includes('.')) {
+			return null;
+		} else {
+			setInput(input + '.');
+		}
+	};
+
+	const checkAdjacentOperators = (array, button) => {
+		if (array.at(-1) === button) {
+			return null;
+		} else {
+			setInput(input + button);
 		}
 	};
 
 	const clearAll = () => {
-		setInput('');
+		setInput([]);
 	};
 
 	const backspace = () => {
