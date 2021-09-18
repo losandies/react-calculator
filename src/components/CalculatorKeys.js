@@ -55,7 +55,7 @@ const CalculatorKeys = ({ handleClick, clearAll, clearOne }) => {
 				9
 			</button>
 			<button
-				className="small-button"
+				className="small-button clear"
 				value="C"
 				onClick={(e) => handleClick(e.target.value)}
 			>
@@ -83,7 +83,7 @@ const CalculatorKeys = ({ handleClick, clearAll, clearOne }) => {
 				6
 			</button>
 			<button
-				className="small-button"
+				className="small-button clear"
 				value="AC"
 				onClick={(e) => handleClick(e.target.value)}
 			>

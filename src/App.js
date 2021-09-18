@@ -18,7 +18,7 @@ function App() {
 		) {
 			checkAdjacentOperators(input, button);
 		} else if (button === '=') {
-			calculate(input).then(setInput([]));
+			calculate(input);
 		} else if (button === 'AC') {
 			clearAll();
 		} else if (button === 'C') {
@@ -37,7 +37,7 @@ function App() {
 	};
 
 	const checkAdjacentOperators = (array, button) => {
-		if (array.at(-1) === button) {
+		if (array[array.length - 1] === button) {
 			return null;
 		} else {
 			setInput(input + button);
