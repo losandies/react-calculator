@@ -37,7 +37,7 @@ function App() {
 	};
 
 	const checkAdjacentOperators = (array, button) => {
-		if (array[array.length - 1].includes('+', '/', '*', '-')) {
+		if (array[array.length - 1] === button) {
 			return null;
 		} else {
 			setInput(input + button);
