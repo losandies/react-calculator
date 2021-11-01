@@ -53,8 +53,12 @@ function App() {
 	};
 
 	const calculate = (array) => {
-		const answer = stringMath(array.toString());
-		setInput(answer);
+		if (array.length > 1) {
+			const answer = stringMath(array.toString());
+			setInput(answer);
+		} else {
+			return null;
+		}
 	};
 
 	return (

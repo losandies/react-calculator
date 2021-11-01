@@ -31,7 +31,7 @@ const CalculatorKeys = ({ handleClick, clearAll, clearOne }) => {
 				value="/"
 				onClick={(e) => handleClick(e.target.value)}
 			>
-				÷
+				/
 			</button>
 			<button
 				className="small-button"
